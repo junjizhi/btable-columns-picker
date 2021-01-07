@@ -65,6 +65,19 @@ export default {
 </script>
 ```
 
+## Explanations
+- The component is a special [\<b-modal\>](https://bootstrap-vue.org/docs/components/modal#modals) that we can trigger with a button.
+- The component takes in two column arrays which represent:
+  - the current columns
+  - all the available columns for picking
+- Modal has two built-in custom events `@show` and `@ok` that we can listen and prepare rendering the two columns selectors
+- When users click the `apply` button, the widget emits an `@apply` event and the parent component can handle it accordingly.
+- To make the component test friendly, I added `:static="true"` to the `b-modal`. This renders the modal content in-place in the DOM instead of appending it to the body. With this, the [jest test](https://github.com/junjizhi/btable-columns-picker/blob/main/src/components/__tests__/BTableColumnsPicker.spec.js) can examine the content and make assertions.
+- The current UI uses two multi-select components from bootstrap. And it doesn't support reordering the selection easily. If you need reordering, consider using the two-list [vue-draggable](https://sortablejs.github.io/Vue.Draggable/#/simple)
+
+
+For more details, check out [my blog](https://blog.junjizhi.com/all/technical/2021/01/07/boostrap-vue-columns-picker.html).
+
 ## Run demo app
 ```
 yarn serve
