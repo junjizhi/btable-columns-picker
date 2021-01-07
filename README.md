@@ -1,5 +1,10 @@
 # btable-columns-picker
 A Bootstrap Vue Table Columns Picker component.
+
+## Screenshot
+![btable columns picker screenshot](https://user-images.githubusercontent.com/2715151/103849872-db8f6100-5073-11eb-8427-4c1bdaa46b5c.png)
+
+
 ## Usage
 
 ```vue
@@ -59,10 +64,6 @@ export default {
 }
 </script>
 ```
-
-## Screenshot
-![btable columns picker screenshot](https://user-images.githubusercontent.com/2715151/103849872-db8f6100-5073-11eb-8427-4c1bdaa46b5c.png)
-
 
 ## Run demo app
 ```
